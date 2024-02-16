@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.talend.ci.api-tester</groupId>
+    <artifactId>esb_bridge_qa_rwadef_4</artifactId>
+    <version>1.0.0</version>
+    <build>
+        <plugins>
+            <plugin>
+
+                <!-- The Talend maven plugin -->
+                <groupId>org.talend.ci</groupId>
+                <artifactId>api-tester-maven-plugin</artifactId>
+                <version>1.10.4</version>
+
+                <executions>
+                    <execution>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>test</goal>
+                        </goals>
+                        <configuration>
+                          <file>ESB_Bridge_QA_RWADeF_4.json</file>
+                          <selectedEnvironment>Petstore API 1.2.3</selectedEnvironment>
+
+                          <!-- Enter your account ID here. Consult your account information in Talend Management Console Subscription page. -->
+                          <accountId>e1035aaa-ccf3-45c5-bc4f-f134b9728bc6</accountId>
+
+                          <instance>eu</instance>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <pluginRepositories>
+        <!-- Enter your plugin repository configuration here. -->
+    </pluginRepositories>
+</project>
